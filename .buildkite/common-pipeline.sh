@@ -10,7 +10,7 @@ echo "steps:"
 
 echo "  - command: ls"
 echo "    plugins:"
-echo "      - equinixmetal-buildkite/trivy#${trivy_plugin}:"
+echo "      - equinixmetal-buildkite/trivy#${trivy_plugin}"
 
 echo "  - label: \":sparkles: SHELL CHECK\""
 echo "    plugins:"
