@@ -17,7 +17,7 @@ echo "    plugins:"
 echo "      - shellcheck#${shell_plugin}:"
 echo "          files: script.sh"
 
-echo "  - label: Run Docker build"
+echo "  - label: \"Run Docker build\""
 echo "    plugins:"
 echo "      - docker#${docker_build_plugin}"
 echo "          image: \"ubuntu:22.04\""
