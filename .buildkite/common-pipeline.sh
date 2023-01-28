@@ -4,6 +4,7 @@ set -eu
 
 trivy_plugin="v1.18.0"
 shell_plugin="v1.3.0"
+docker_build_plugin="v5.3.0"
 
 echo "steps:"
 
@@ -15,3 +16,8 @@ echo "  - label: \":sparkles: SHELL CHECK\""
 echo "    plugins:"
 echo "      - shellcheck#${shell_plugin}:"
 echo "          files: script.sh"
+
+echo "  - label: Run Docker build"
+echo "    plugins:"
+echo "      - docker#${docker_build_plugin}"
+echo "          image: ubuntu:22.04"
