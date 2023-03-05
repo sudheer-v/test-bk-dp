@@ -1,10 +1,4 @@
 steps:
   - command: echo "Checks out multiple git repositories"
     key: "pipeline-gen"
-    plugins:
-      - hasura/smooth-checkout#v4.1.1:
-          repos:
-            - config:
-              - url: https://github.com/hnadimint/Dynamic_go-pipeline.git   
-    #command: "cd dy-go-pipeline && go run main.go | buildkite-agent pipeline upload"
-    command: "ls -lR && ls -lR ../"
+    command: "mkdir dy-repo && git clone https://github.com/hnadimint/Dynamic_go-pipeline.git && cd dy-repo/Dynamic_go-pipeline && go run main.go | buildkite-agent pipeline upload"
