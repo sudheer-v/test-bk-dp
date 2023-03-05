@@ -1,4 +1,4 @@
 steps:
   - command: echo "Checks out multiple git repositories"
     key: "pipeline-gen"
-    command: "mkdir dy-repo && git clone https://github.com/hnadimint/Dynamic_go-pipeline.git && Dynamic_go-pipeline && go run main.go | buildkite-agent pipeline upload"
+    command: "mkdir dy-repo && git clone https://github.com/hnadimint/Dynamic_go-pipeline.git && cd Dynamic_go-pipeline && go run main.go | buildkite-agent pipeline upload"
