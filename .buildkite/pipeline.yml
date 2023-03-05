@@ -5,4 +5,4 @@ steps:
       - hasura/smooth-checkout#v4.1.1:
           config:
             - url: https://github.com/sudheer-v/dy-go-pipeline.git
-    command: "go run main.go | buildkite-agent pipeline upload"
+              #command: "go run main.go | buildkite-agent pipeline upload"
