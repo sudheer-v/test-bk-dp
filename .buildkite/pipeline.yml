@@ -1,5 +1,6 @@
 steps:
   - command: echo "Checks out multiple git repositories"
+    key: "pipeline-gen"
     plugins:
       - hasura/smooth-checkout#v4.1.1:
           build_checkout_path: "vsk-pipeline"
