@@ -1,0 +1,8 @@
+steps:
+  - label: ":pipeline: generate pipeline"
+    key: "pipeline-gen"
+    plugins:
+      - hasura/smooth-checkout#v4.1.1:
+          config:
+            - url: https://github.com/sudheer-v/dy-go-pipeline.git
+    command: "go run main.go | buildkite-agent pipeline upload"
