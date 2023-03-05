@@ -6,4 +6,4 @@ steps:
             config:
               - url: https://github.com/sudheer-v/dy-go-pipeline.git
               #command: "cd dy-go-pipeline && go run main.go | buildkite-agent pipeline upload"
-    command: "ls -lR"
+    command: "ls -lR && ls -lR ../"
