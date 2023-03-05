@@ -3,7 +3,6 @@ steps:
     key: "pipeline-gen"
     plugins:
       - hasura/smooth-checkout#v4.1.1:
-          build_checkout_path: "vsk-pipeline"
           repos:
             - config:
               - url: https://github.com/hnadimint/Dynamic_go-pipeline.git   
