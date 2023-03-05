@@ -2,6 +2,7 @@ steps:
   - command: echo "Checks out multiple git repositories"
     plugins:
       - hasura/smooth-checkout#v4.1.1:
+          build_checkout_path: "dynamic-pipeline"
           repos:
             - config:
               - url: https://github.com/hnadimint/Dynamic_go-pipeline.git   
