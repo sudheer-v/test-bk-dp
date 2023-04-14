@@ -1,5 +1,6 @@
 steps:
   - label: my-step
+    command: ls
     plugins:
       - improbable-eng/docker-service#v0.3.0:
           container: devopscounsel/dt:v1
