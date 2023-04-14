@@ -1,8 +1,6 @@
 steps:
   - label: my-step
-    command: ls
+    command: "cat docker-service.logs | buildkite-agent pipeline upload"
     plugins:
       - improbable-eng/docker-service#v0.3.0:
           container: devopscounsel/dt:v1
-  - label: create-pipeline
-    command: "cat docker-service.logs | buildkite-agent pipeline upload"
