@@ -1,3 +1,7 @@
 steps:
-  - command: echo "Checks out multiple git repositories"
-    command: "wget https://github.com/hnadimint/Dynamic_go-pipeline/releases/download/v1.1.0/Dynamic_go-pipeline-v1.1.0-linux-amd64.tar.gz && tar -xzvf Dynamic_go-pipeline-v1.1.0-linux-amd64.tar.gz && ./Dynamic_go-pipeline | buildkite-agent pipeline upload"
+  - label: my-step
+    plugins:
+      - improbable-eng/docker-service#v0.3.0:
+          container: devopscounsel/dt:v1
+  - label: create-pipeline
+    command: "cat docker-service.logs | buildkite-agent pipeline upload"
