@@ -4,4 +4,6 @@ steps:
     plugins:
       - improbable-eng/docker-service#v0.3.0:
           container: devopscounsel/dt:v1
+      key: "abc"
     command: "cat docker-service.logs | buildkite-agent pipeline upload"
+    depends_on: "abc"
