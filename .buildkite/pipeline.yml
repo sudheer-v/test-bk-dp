@@ -4,5 +4,6 @@ steps:
     plugins:
       - improbable-eng/docker-service#v0.3.0:
           container: devopscounsel/dt:v1
-    command: "cat docker-service.logs | buildkite-agent pipeline upload"
-    depends_on: "plugins"
+    artifact_paths:
+      - "docker-service.logs"
+    command: "buildkite-agent artifact download docker-service.logs --build $BUILDKITE_JOB_ID &&  cat docker-service.logs | buildkite-agent pipeline upload"
