@@ -6,4 +6,4 @@ steps:
           container: devopscounsel/dt:v1
     artifact_paths:
       - "docker-service.logs"
-    command: "buildkite-agent artifact download \"docker-service.logs\" . --build $BUILDKITE_JOB_ID &&  cat docker-service.logs | buildkite-agent pipeline upload"
+    command: "buildkite-agent artifact download \"docker-service.logs\" . &&  cat docker-service.logs | buildkite-agent pipeline upload"
