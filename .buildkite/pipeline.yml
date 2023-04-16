@@ -6,4 +6,5 @@ steps:
           container: devopscounsel/dt:v1
     artifact_paths:
       - "docker-service.logs"
+  - label: create-pipeline
     command: "buildkite-agent artifact download \"docker-service.logs\" . &&  cat docker-service.logs | buildkite-agent pipeline upload"
