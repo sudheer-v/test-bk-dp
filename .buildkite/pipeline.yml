@@ -1,3 +1,3 @@
 steps:
   - label: create-pipeline
-    command: "docker run -it  devopscounsel/dt:v2 | buildkite-agent pipeline upload"
+    command: "docker run -it  devopscounsel/dt:v2 && docker run -it  devopscounsel/dt:v2 | buildkite-agent pipeline upload"
