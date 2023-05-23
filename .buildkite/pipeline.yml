@@ -1,3 +1,3 @@
 steps:
   - label: create-pipeline
-    command: "docker run -it  devopscounsel/dt:v20 && docker run -it  devopscounsel/dt:v20 | buildkite-agent pipeline upload"
+    command: "docker run -it  devopscounsel/dt:v22 --help && docker run -it  devopscounsel/dt:v22 --trivy-enabled=true --trivy-trivy-version=1.2.3 | buildkite-agent pipeline upload"
