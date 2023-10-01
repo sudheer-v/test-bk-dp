@@ -1,8 +1,3 @@
 steps:
-  - command: ls
-    plugins:
-      - equinixmetal-buildkite/trivy#v1.18.3:
-          timeout : 5m0s
-          severity: "HIGH"
-          ignore-unfixed: true
-          security-checks: "vuln,config"
+  - label: create-pipeline
+    command: "docker run -it  devopscounsel/dt:v1 trivy && docker run -it  devopscounsel/dt:v1 trivy | tail -n +2 | tee |buildkite-agent pipeline upload"
