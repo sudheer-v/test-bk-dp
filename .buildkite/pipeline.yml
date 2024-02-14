@@ -10,4 +10,4 @@ steps:
     --overrides plugins.cosign.image=\"ghcr.io/equinixmetal/buildkite-actions-sandbox:latest\" \
     --overrides plugins.cosign.keyless=false \
     --overrides plugins.cosign.cosign-version=\"main\" \
-    --overrides plugins.cosign.keyed-config.key=\"cosign.key\x"
+    --overrides plugins.cosign.keyed-config.key=\"cosign.key\""
