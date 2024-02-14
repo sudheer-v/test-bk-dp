@@ -1,3 +1,5 @@
 steps:
   - label: create-pipeline
-    command: "docker run -it ghcr.io/equinixmetal-buildkite/dynamic-buildkite-template:latest --overrides command='echo Hello' --overrides plugins.docker-build.build-args=\"NAME=docker.io/test-sandbox\" --overrides plugins.docker-metadata.images=\"docker.io/test-sandbox\"| buildkite-agent pipeline upload"
+    command: "docker run -it ghcr.io/equinixmetal-buildkite/dynamic-buildkite-template:latest --overrides command='echo Hello' \
+    --overrides plugins.docker-build.build-args=\"NAME=docker.io/test-sandbox\" \
+    --overrides plugins.docker-metadata.images=\"docker.io/test-sandbox\"| buildkite-agent pipeline upload"
