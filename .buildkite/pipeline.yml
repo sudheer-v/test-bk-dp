@@ -1,6 +1,6 @@
 steps:
   - label: create-pipeline
-    command: "docker run -it ghcr.io/equinixmetal-buildkite/dynamic-buildkite-template:latest --overrides command=\"echo \"$COSIGN_KEY_SECRET\" > \"${COSIGN_KEY_PATH}\"\" \
+    command: "docker run -it ghcr.io/equinixmetal-buildkite/dynamic-buildkite-template:latest --overrides command=\"echo \'$COSIGN_KEY_SECRET\' > \'${COSIGN_KEY_PATH}\'\" \
     --overrides plugins.docker-build.build-args=\"NAME=docker.io/test-sandbox\" \
     --overrides plugins.docker-metadata.images=\"docker.io/test-sandbox\" \
     --overrides plugins.docker-metadata.extra_tags=\"latest\" \
