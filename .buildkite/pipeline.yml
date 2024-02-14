@@ -1,12 +1,3 @@
 steps:
   - label: create-pipeline
-    command: "docker run -it ghcr.io/equinixmetal-buildkite/dynamic-buildkite-template:latest --overrides command='echo "$COSIGN_KEY_SECRET" > ${COSIGN_KEY_PATH}' \
-    --overrides plugins.docker-build.build-args=\"NAME=docker.io/test-sandbox\" \
-    --overrides plugins.docker-metadata.images=\"docker.io/test-sandbox\" \
-    --overrides plugins.docker-metadata.extra_tags=\"latest\" \
-    --overrides plugins.ssm-buildkite-plugin.ssm-buildkite-version=\"v1.0.4\" \
-    --overrides plugins.ssm-buildkite-plugin.parameters.COSIGN_KEY_SECRET=\"/buildkite/cosign/cosign-priv-key/v1\" \
-    --overrides plugins.ssm-buildkite-plugin.parameters.COSIGN_PASSWORD=\"/buildkite/cosign/cosign-priv-key-pass/v1\" \
-    --overrides plugins.cosign.image=\"ghcr.io/equinixmetal/buildkite-actions-sandbox:latest\" \
-    --overrides plugins.cosign.cosign-version=\"main\" \
-    --overrides plugins.cosign.keyed-config.key=\"cosign.key\""
+    command: "docker run -it ghcr.io/equinixmetal-buildkite/dynamic-buildkite-template:latest --overrides command='echo "$COSIGN_KEY_SECRET" > ${COSIGN_KEY_PATH}'"
